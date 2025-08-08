@@ -1,0 +1,124 @@
+# TQSdk 学习指南 (账号: QiZhihui 密码: QZH123)
+
+## 1. 项目架构总结
+
+### 核心模块
+| 文件/目录          | 功能描述                                                                 |
+|---------------------|--------------------------------------------------------------------------|
+| `api.py`            | 主API接口，提供行情、交易等核心功能                                      |
+| `baseApi.py`        | API基类，定义核心接口                                                   |
+| `account.py`        | 账户管理，处理登录、权限等                                               |
+| `multiaccount.py`   | 多账户管理                                                              |
+
+### 算法交易
+| `algorithm/`        | 包含TWAP等算法交易实现                                                   |
+| `twap.py`           | 时间加权平均价格算法，拆分大单为小单                                     |
+
+### 回测系统
+| `backtest.py`       | 回测核心逻辑，模拟市场环境                                               |
+| `backtest/`         | 回测相关辅助模块                                                         |
+
+### 数据管理
+| `data_series.py`    | K线、Tick等时序数据管理                                                  |
+| `data_extension.py` | 数据扩展功能                                                             |
+
+### 风险管理
+| `risk_manager.py`   | 风控系统核心                                                             |
+| `risk_rule.py`      | 风控规则实现                                                             |
+
+### 技术分析
+| `ta.py`             | 技术指标计算                                                             |
+| `tafunc.py`         | 技术分析工具函数                                                         |
+
+### 辅助功能
+| `web/`              | Web相关功能                                                              |
+| `tqwebhelper.py`    | Web辅助工具                                                              |
+
+## 2. 关键文件功能说明
+
+### `api.py`
+- 提供`TqApi`类，是用户主要交互接口
+- 功能包括：
+  - 行情订阅(`get_quote`)
+  - K线获取(`get_kline_serial`)
+  - 交易指令(`insert_order`)
+
+### `algorithm/twap.py`
+- 实现TWAP算法：
+```python
+from tqsdk.algorithm import TWAP
+# 创建TWAP实例
+twap = TWAP(api, "SHFE.rb2205", 100)  # 目标100手
+# 运行算法
+while twap.is_waiting():
+    api.wait_update()
+```
+
+### `backtest.py`
+- 提供`TqBacktest`类
+- 支持设置回测时间范围、手续费等参数
+- 模拟市场撮合逻辑
+
+## 3. 基础设置
+```python
+from tqsdk import TqApi, TqAuth
+api = TqApi(auth=TqAuth("QiZhihui", "QZH123"))  # 初始化
+```
+
+## 4. 获取行情数据
+```python
+# 获取合约行情
+quote = api.get_quote("SHFE.rb2205")  # 螺纹钢主力合约
+print("最新价:", quote.last_price)
+
+# 获取K线数据 (5分钟线)
+klines = api.get_kline_serial("SHFE.rb2205", 5*60)
+print("最近5根K线:", klines.close.iloc[-5:])
+```
+
+## 5. 回测功能
+```python
+from datetime import date
+from tqsdk import TqBacktest
+
+# 回测模式初始化
+api = TqApi(backtest=TqBacktest(
+    start_dt=date(2023,1,1), 
+    end_dt=date(2023,12,31)),
+    auth=TqAuth("QiZhihui", "QZH123"))
+```
+
+## 6. 简单策略示例
+```python
+# 双均线策略
+from tqsdk import TargetPosTask
+
+# 获取K线
+klines = api.get_kline_serial("SHFE.rb2205", 60*60, data_length=20)  # 1小时线
+target_pos = TargetPosTask(api, "SHFE.rb2205")
+
+while True:
+    api.wait_update()
+    if api.is_changing(klines):
+        # 计算均线
+        ma5 = klines.close.iloc[-5:].mean()  # 5周期均线
+        ma20 = klines.close.iloc[-20:].mean() # 20周期均线
+        
+        # 交易信号
+        if ma5 > ma20:
+            target_pos.set_target_volume(1)  # 做多1手
+        elif ma5 < ma20:
+            target_pos.set_target_volume(0)  # 平仓
+```
+
+## 7. 高级功能
+- 使用`TqReplay`进行复盘
+- 使用`algorithm`模块中的TWAP算法
+- 多账户管理
+- 期权交易
+
+## 8. 注意事项
+1. 实盘前务必充分测试策略
+2. 使用完毕后调用api.close()释放资源
+3. 妥善保管账号密码
+4. 回测结果不代表实盘表现
