@@ -1,0 +1,247 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Edward West
+# This file is distributed under the same license as the PyBroker package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PyBroker \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-09 16:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/notebooks/3. 5142831cb2ce4b42bfdaa5735c2cce33 Bootstrap
+#: Evaluating Metrics.ipynb:9 with
+msgid "Evaluating with Bootstrap Metrics"
+msgstr "使用 Bootstrap 指标评估"
+
+#: ../../source/notebooks/3. Bootstrap Evaluating Metrics.ipynb:11
+#: cf8fa95d6041428098f28e94804aa74b with
+msgid ""
+"Bootstrap metrics can help us to more thoroughly evaluate a trading "
+"strategy, as we will see in this notebook."
+msgstr "自助法指标可以帮助我们更全面地评估交易策略，正如我们将在本文档中看到的那样。"
+
+#: ../../source/notebooks/3. 0175781d12904ff28ea99fb2eae11c00 Bootstrap
+#: Evaluating Metrics.ipynb:13 with
+msgid ""
+"`In the previous notebook "
+"<https://www.pybroker.com/en/latest/notebooks/2.%20Backtesting%20a%20Strategy.html>`__,"
+" we implemented a trading strategy and backtested it. Here is the "
+"implementation again:"
+msgstr ""
+"`在上一篇文档中 "
+"<https://www.pybroker.com/en/latest/notebooks/2.%20Backtesting%20a%20Strategy.html>`__，我们实现了一个交易策略并对其进行了回测。这是再次实现："
+
+#: ../../source/notebooks/3. Bootstrap Evaluating Metrics.ipynb:52
+#: f30ff55643634d0f8609fb69fab5c1fb with
+msgid ""
+"As before, we create a new `Strategy "
+"<https://www.pybroker.com/en/latest/reference/pybroker.strategy.html#pybroker.strategy.Strategy>`__"
+" instance with the given configurations:"
+msgstr ""
+"与之前一样，我们使用给定的配置创建一个新的 `Strategy "
+"<https://www.pybroker.com/en/latest/reference/pybroker.strategy.html#pybroker.strategy.Strategy>`__"
+" 实例："
+
+#: ../../source/notebooks/3. Bootstrap Evaluating Metrics.ipynb:76
+#: a7ca9a346b3c496097afeddd5e97a4a3 with
+msgid ""
+"This time, the ``Strategy`` is configured with a `bootstrap_sample_size "
+"<https://www.pybroker.com/en/latest/reference/pybroker.config.html#pybroker.config.StrategyConfig.bootstrap_sample_size>`__"
+" of ``100`` because of the small amount of historical data being used. "
+"Next, we run the backtest with bootstrap metrics enabled:"
+msgstr ""
+"这次，由于使用了较少的历史数据，``Strategy`` 配置了 `bootstrap_sample_size "
+"<https://www.pybroker.com/en/latest/reference/pybroker.config.html#pybroker.config.StrategyConfig.bootstrap_sample_size>`__"
+" 为 ``100``。接下来，我们运行启用自助法指标的回测："
+
+#: ../../source/notebooks/3. 848877ac7ba842448e79f46b8c41b2d5 Bootstrap
+#: Evaluating Metrics.ipynb:573 with
+msgid ""
+"When we look at the ``total_pnl`` metric above, it seems that we have a "
+"profitable trading strategy on our first try. However, we cannot be "
+"completely sure that these results are repeatable and not just due to "
+"chance. To gain more confidence in our results, we can use the `boostrap "
+"method <https://en.wikipedia.org/wiki/Bootstrapping_(statistics)>`__ to "
+"compute metrics."
+msgstr ""
+"当我们查看上面的 ``total_pnl`` "
+"指标时，似乎我们在第一次尝试时就拥有了一个盈利的交易策略。然而，我们不能完全确定这些结果是可重复的，而不仅仅是偶然的。为了对我们的结果更有信心，我们可以使用"
+" `自助法 <https://en.wikipedia.org/wiki/Bootstrapping_(statistics)>`__ "
+"来计算指标。"
+
+#: ../../source/notebooks/3. 289fd231d15e49499cc2494d83ae5821 Bootstrap
+#: Evaluating Metrics.ipynb:575 with
+msgid ""
+"The bootstrap method works by repeatedly computing a metric on random "
+"samples drawn from the backtest's returns. Then, the metric is computed "
+"on each random sample, and the average is taken. By doing this on "
+"thousands of random samples, we obtain a more robust and accurate "
+"estimate of the metric."
+msgstr "自助法通过在从回测收益率抽取的随机样本上反复计算指标来工作。然后，在每个随机样本上计算指标，并取平均值。通过在数千个随机样本上进行这样的操作，我们可以获得更稳健、更准确的指标估计。"
+
+#: ../../source/notebooks/3. Bootstrap Evaluating Metrics.ipynb:578
+#: f8bafff338fc48f5abce96931734e68e with
+msgid "Confidence Intervals"
+msgstr "置信区间"
+
+#: ../../source/notebooks/3. 6bb1ef3b61804f3691ba2a1a3d277bca Bootstrap
+#: Evaluating Metrics.ipynb:580 with
+msgid ""
+"**PyBroker** applies the bootstrap method to calculate `confidence "
+"intervals <https://en.wikipedia.org/wiki/Confidence_interval>`__ for two "
+"performance metrics, the `Profit Factor "
+"<https://www.pybroker.com/en/latest/reference/pybroker.eval.html#pybroker.eval.EvalMetrics.profit_factor>`__"
+" and `Sharpe Ratio <https://en.wikipedia.org/wiki/Sharpe_ratio>`__:"
+msgstr ""
+"**PyBroker** 使用自助法计算两个绩效指标（ `利润因子 "
+"<https://www.pybroker.com/en/latest/reference/pybroker.eval.html#pybroker.eval.EvalMetrics.profit_factor>`__"
+" 和 `夏普比率 <https://en.wikipedia.org/wiki/Sharpe_ratio>`__）的 `置信区间 "
+"<https://en.wikipedia.org/wiki/Confidence_interval>`__："
+
+#: ../../source/notebooks/3. 0f2ff1e3e6704cb5b00c92ef7e1be644 Bootstrap
+#: Evaluating Metrics.ipynb:724 with
+msgid ""
+"**PyBroker** uses the `bias corrected and accelerated (BCa) bootstrap "
+"method <https://blogs.sas.com/content/iml/2017/07/12/bootstrap-bca-"
+"interval.html>`__ to calculate the confidence intervals for these "
+"metrics. The returns are sampled per-bar rather than per-trade to capture"
+" more information in the metrics."
+msgstr ""
+"**PyBroker** 使用 `偏差校正和加速（BCa）自助法 "
+"<https://blogs.sas.com/content/iml/2017/07/12/bootstrap-bca-"
+"interval.html>`__ 计算这些指标的置信区间。收益率是按每根 K 线进行抽样的，而不是按每笔交易进行抽样，以便在指标中捕捉更多信息。"
+
+#: ../../source/notebooks/3. 7506bb00bcc841aa93a094fbbef4f7e7 Bootstrap
+#: Evaluating Metrics.ipynb:726 with
+msgid ""
+"The resulting table shows the lower bound of the confidence interval at "
+"the given confidence level. This provides a more conservative estimate of"
+" the strategy's performance. For example, we can be ``97.5%`` confident "
+"that the Sharpe Ratio is at or above a given value of *x*."
+msgstr ""
+"生成的表格显示了给定置信水平下置信区间的下限。这为策略的表现提供了一个更保守的估计。例如，我们可以 ``97.5%`` 的把握认为夏普比率在给定值"
+" *x* 或更高。"
+
+#: ../../source/notebooks/3. 2435396a792a424f91aa9a3344cd0a6c Bootstrap
+#: Evaluating Metrics.ipynb:728 with
+msgid ""
+"In this example, the Sharpe Ratio has negative lower bounds, and the "
+"lower bounds of the Profit Factor are less than 1, which suggests that "
+"the strategy is not reliable."
+msgstr "在这个例子中，夏普比率的下界为负，利润因子的下界小于 1，这表明策略是不可靠的。"
+
+#: ../../source/notebooks/3. Bootstrap Evaluating Metrics.ipynb:731
+#: a64c3480302f464b8740f4dc48ed2090 with
+msgid "Maximum Drawdown"
+msgstr "最大回撤"
+
+#: ../../source/notebooks/3. 65e2a50fbd3447348e3338851144b84f Bootstrap
+#: Evaluating Metrics.ipynb:733 with
+msgid ""
+"In this section, we examine the maximum drawdown of the strategy using "
+"the bootstrap method. The probabilities of the drawdown not exceeding "
+"certain values, represented in cash and percentage of portfolio equity, "
+"are displayed below:"
+msgstr "在本节中，我们使用自助法检查策略的最大回撤。不超过某些值的回撤概率（用现金和投资组合权益百分比表示）如下所示："
+
+#: ../../source/notebooks/3. Bootstrap Evaluating Metrics.ipynb:857
+#: f9fee13de15140f0a8e1d610fbce4690 with
+msgid ""
+"These confidence levels were obtained using per-bar returns from the "
+"backtest's out-of-sample results, similar to how the Profit Factor and "
+"Sharpe Ratio were calculated."
+msgstr "这些置信水平是根据回测的样本外结果中的每根 K 线收益率获得的，类似于计算利润因子和夏普比率的方法。"
+
+#: ../../source/notebooks/3. Bootstrap Evaluating Metrics.ipynb:859
+#: a60f81e057114ef98c378f93c0fc753b with
+msgid ""
+"We can observe that the bootstrapped max drawdown of ``-10.46%`` at a "
+"``99.9%`` confidence level is worse than the ``-4.55%`` we saw in our "
+"original results. This highlights the importance of using randomized "
+"tests to evaluate the performance of your trading strategy."
+msgstr ""
+"我们可以观察到，``99.9%`` 置信水平下的自助法最大回撤为 ``-10.56%``，这比我们原始结果中看到的 ``-4.71%`` "
+"更糟。这突显了使用随机测试评估交易策略绩效的重要性。"
+
+#: ../../source/notebooks/3. 08a7c6ae8ae5446dad99cab054f8c49b Bootstrap
+#: Evaluating Metrics.ipynb:861 with
+msgid ""
+"`In the next notebook, we will discuss how to incorporate ranking and "
+"position sizing in your trading strategies "
+"<https://www.pybroker.com/en/latest/notebooks/4.%20Ranking%20and%20Position%20Sizing.html>`__."
+msgstr ""
+"`在下一篇文章中，我们将讨论如何在交易策略中结合排名和头寸规模 "
+"<https://www.pybroker.com/en/latest/notebooks/4.%20Ranking%20and%20Position%20Sizing.html>`__。"
+
+#~ msgid ""
+#~ "The bootstrap method works by repeatedly"
+#~ " computing a metric on random samples"
+#~ " drawn from the backtest's returns. "
+#~ "Then, the metric is computed on "
+#~ "each random sample, and the average "
+#~ "is taken. By doing this on "
+#~ "thousands of random samples, we obtain"
+#~ " a more robust and accurate estimate"
+#~ " of the metric."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The resulting table shows the lower "
+#~ "bound of the confidence interval at "
+#~ "the given confidence level. This "
+#~ "provides a more conservative estimate of"
+#~ " the strategy's performance. For example,"
+#~ " we can be ``97.5%`` confident that"
+#~ " the Sharpe Ratio is at or "
+#~ "above a given value of *x*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "These confidence levels were obtained "
+#~ "using per-bar returns from the "
+#~ "backtest's out-of-sample results, "
+#~ "similar to how the Profit Factor "
+#~ "and Sharpe Ratio were calculated."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The bootstrap method works by repeatedly"
+#~ " computing a metric on random samples"
+#~ " drawn from the backtest’s returns. "
+#~ "Then, the metric is computed on "
+#~ "each random sample, and the average "
+#~ "is taken. By doing this on "
+#~ "thousands of random samples, we obtain"
+#~ " a more robust and accurate estimate"
+#~ " of the metric."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The resulting table shows the lower "
+#~ "bound of the confidence interval at "
+#~ "the given confidence level. This "
+#~ "provides a more conservative estimate of"
+#~ " the strategy’s performance. For example,"
+#~ " we can be ``97.5%`` confident that"
+#~ " the Sharpe Ratio is at or "
+#~ "above a given value of *x*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "These confidence levels were obtained "
+#~ "using per-bar returns from the "
+#~ "backtest’s out-of-sample results, "
+#~ "similar to how the Profit Factor "
+#~ "and Sharpe Ratio were calculated."
+#~ msgstr ""
+

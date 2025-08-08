@@ -1,0 +1,559 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Edward West
+# This file is distributed under the same license as the PyBroker package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PyBroker \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-27 18:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../source/reference/pybroker.data.rst:2 7a15c567fc4f47c7be9e79a016ae4a03
+msgid "pybroker.data module"
+msgstr ""
+
+#: 9f8947ae58f84a2aaefe7bbd2ebe0a9b of pybroker.data:1
+msgid "Contains :class:`.DataSource`\\ s used to fetch external data."
+msgstr ""
+
+#: 33705d5b14734b7383edc267d4e5082a 7f47a97d02dc48568a70cdd2a2964670 of
+#: pybroker.data.Alpaca:1 pybroker.data.AlpacaCrypto:1 pybroker.data.YFinance:1
+msgid "Bases: :py:class:`~pybroker.data.DataSource`"
+msgstr ""
+
+#: 373cd2699a684c9ea992cdabcf87bb34 of pybroker.data.Alpaca:1
+msgid "Retrieves stock data from `Alpaca <https://alpaca.markets/>`_."
+msgstr ""
+
+#: c2f5efd10e914b2094947f6c6e7820d1 of pybroker.data.Alpaca.query:1
+#: pybroker.data.AlpacaCrypto.query:1 pybroker.data.DataSource.query:1
+msgid ""
+"Queries data. Cached data is returned if caching is enabled by calling "
+":meth:`pybroker.cache.enable_data_source_cache`."
+msgstr ""
+
+#: b7d7325c52ae41fbacfcb9fd11d6a597 of pybroker.data.Alpaca.query
+#: pybroker.data.AlpacaCrypto pybroker.data.AlpacaCrypto.query
+#: pybroker.data.DataSource._fetch_data pybroker.data.DataSource.query
+#: pybroker.data.DataSourceCacheMixin.get_cached
+#: pybroker.data.DataSourceCacheMixin.set_cached pybroker.data.YFinance.query
+msgid "Parameters"
+msgstr ""
+
+#: d118459db4ce49ea8514f61979cadb4e of pybroker.data.Alpaca.query:4
+#: pybroker.data.AlpacaCrypto.query:4 pybroker.data.DataSource.query:4
+msgid "Symbols of the data to query."
+msgstr ""
+
+#: 5fcd549d675f4df093e14802b59fb90a of pybroker.data.Alpaca.query:5
+#: pybroker.data.AlpacaCrypto.query:5 pybroker.data.DataSource._fetch_data:8
+#: pybroker.data.DataSource.query:5 pybroker.data.YFinance.query:5
+msgid "Start date of the data to query (inclusive)."
+msgstr ""
+
+#: ad64a0489c7c46639f783dbb292513fd b1ef047995944932807d14430e73c662 of
+#: pybroker.data.Alpaca.query:6 pybroker.data.AlpacaCrypto.query:6
+#: pybroker.data.DataSource._fetch_data:9 pybroker.data.DataSource.query:6
+#: pybroker.data.YFinance.query:6
+msgid "End date of the data to query (inclusive)."
+msgstr ""
+
+#: 2a0b65b0a05144ed8581bd664c30a885 of pybroker.data.Alpaca.query:7
+#: pybroker.data.AlpacaCrypto.query:7 pybroker.data.DataSource._fetch_data:10
+#: pybroker.data.DataSource.query:7
+msgid ""
+"Formatted string that specifies the timeframe resolution to query. The "
+"timeframe string supports the following units:  - ``\"s\"``/``\"sec\"``: "
+"seconds - ``\"m\"``/``\"min\"``: minutes - ``\"h\"``/``\"hour\"``: hours "
+"- ``\"d\"``/``\"day\"``: days - ``\"w\"``/``\"week\"``: weeks - "
+"``\"mo\"``/``\"month\"``: months  An example timeframe string is ``1h "
+"30m``."
+msgstr ""
+
+#: f301c58ea23a47229574c8c3218545a8 of pybroker.data.Alpaca.query:7
+#: pybroker.data.AlpacaCrypto.query:7 pybroker.data.DataSource._fetch_data:10
+#: pybroker.data.DataSource.query:7
+msgid ""
+"Formatted string that specifies the timeframe resolution to query. The "
+"timeframe string supports the following units:"
+msgstr ""
+
+#: 8b2f08111f564a95a1ab75cc4836953b of pybroker.data.Alpaca.query:11
+#: pybroker.data.AlpacaCrypto.query:11 pybroker.data.DataSource._fetch_data:14
+#: pybroker.data.DataSource.query:11
+#: pybroker.data.DataSourceCacheMixin.get_cached:9
+#: pybroker.data.DataSourceCacheMixin.set_cached:8
+msgid "``\"s\"``/``\"sec\"``: seconds"
+msgstr ""
+
+#: 329e95067d4848a78eda5a2e1c7d28eb of pybroker.data.Alpaca.query:12
+#: pybroker.data.AlpacaCrypto.query:12 pybroker.data.DataSource._fetch_data:15
+#: pybroker.data.DataSource.query:12
+#: pybroker.data.DataSourceCacheMixin.get_cached:10
+#: pybroker.data.DataSourceCacheMixin.set_cached:9
+msgid "``\"m\"``/``\"min\"``: minutes"
+msgstr ""
+
+#: b0a9ab0567ad46aa868bd9ca58f678b9 of pybroker.data.Alpaca.query:13
+#: pybroker.data.AlpacaCrypto.query:13 pybroker.data.DataSource._fetch_data:16
+#: pybroker.data.DataSource.query:13
+#: pybroker.data.DataSourceCacheMixin.get_cached:11
+#: pybroker.data.DataSourceCacheMixin.set_cached:10
+msgid "``\"h\"``/``\"hour\"``: hours"
+msgstr ""
+
+#: 8cc67ea07d9043108ae222e4caee70ab of pybroker.data.Alpaca.query:14
+#: pybroker.data.AlpacaCrypto.query:14 pybroker.data.DataSource._fetch_data:17
+#: pybroker.data.DataSource.query:14
+#: pybroker.data.DataSourceCacheMixin.get_cached:12
+#: pybroker.data.DataSourceCacheMixin.set_cached:11
+msgid "``\"d\"``/``\"day\"``: days"
+msgstr ""
+
+#: 64bd5706ca7946e39a4a7d3b51868d22 of pybroker.data.Alpaca.query:15
+#: pybroker.data.AlpacaCrypto.query:15 pybroker.data.DataSource._fetch_data:18
+#: pybroker.data.DataSource.query:15
+#: pybroker.data.DataSourceCacheMixin.get_cached:13
+#: pybroker.data.DataSourceCacheMixin.set_cached:12
+msgid "``\"w\"``/``\"week\"``: weeks"
+msgstr ""
+
+#: bd378daece0647cbac181cb1ba2e6928 of pybroker.data.Alpaca.query:16
+#: pybroker.data.AlpacaCrypto.query:16 pybroker.data.DataSource._fetch_data:19
+#: pybroker.data.DataSource.query:16
+#: pybroker.data.DataSourceCacheMixin.get_cached:14
+#: pybroker.data.DataSourceCacheMixin.set_cached:13
+msgid "``\"mo\"``/``\"month\"``: months"
+msgstr ""
+
+#: 72129972846c44c0b7feb5e530b67d52 of pybroker.data.Alpaca.query:18
+#: pybroker.data.AlpacaCrypto.query:18 pybroker.data.DataSource._fetch_data:21
+#: pybroker.data.DataSource.query:18
+#: pybroker.data.DataSourceCacheMixin.get_cached:16
+msgid "An example timeframe string is ``1h 30m``."
+msgstr ""
+
+#: 7a0497f624ab4de7b33fbd05b4228915 ac6ea6bb6a8b453eb19de97e2d8357bf of
+#: pybroker.data.Alpaca.query:19 pybroker.data.AlpacaCrypto.query:19
+#: pybroker.data.DataSource._fetch_data:22 pybroker.data.DataSource.query:19
+#: pybroker.data.DataSourceCacheMixin.get_cached:19
+#: pybroker.data.DataSourceCacheMixin.set_cached:18
+msgid "The type of adjustment to make."
+msgstr ""
+
+#: 3751bc7cba2346b9883030381ed88b82 of pybroker.data.Alpaca.query
+#: pybroker.data.AlpacaCrypto.query pybroker.data.DataSource._fetch_data
+#: pybroker.data.DataSource.query pybroker.data.DataSourceCacheMixin.get_cached
+#: pybroker.data.YFinance.query
+msgid "Returns"
+msgstr ""
+
+#: 99b221852f934beca31fa4cf9203d4ca of pybroker.data.Alpaca.query:21
+#: pybroker.data.AlpacaCrypto.query:21 pybroker.data.DataSource._fetch_data:24
+#: pybroker.data.DataSource.query:21 pybroker.data.YFinance.query:8
+msgid ":class:`pandas.DataFrame` containing the queried data."
+msgstr ""
+
+#: 048792f63a3a44f29e3f9ca4f032748b of pybroker.data.AlpacaCrypto:1
+msgid "Retrieves crypto data from `Alpaca <https://alpaca.markets/>`_."
+msgstr ""
+
+#: a3701c597a744354805b6c32898f9105 of pybroker.data.AlpacaCrypto:3
+msgid "Alpaca API key."
+msgstr ""
+
+#: ccd6f0dd5512462d9c06152cd4118718 of pybroker.data.AlpacaCrypto:4
+msgid "Alpaca API secret."
+msgstr ""
+
+#: f01df335c666459eb824cddb11f4f364 of pybroker.data.DataSource:1
+msgid ""
+"Bases: :py:class:`~abc.ABC`, "
+":py:class:`~pybroker.data.DataSourceCacheMixin`"
+msgstr ""
+
+#: 66443ddec6184fe080fb634f74c906ac of pybroker.data.DataSource:1
+msgid ""
+"Base class for querying data from an external source. Extend this class "
+"and override :meth:`._fetch_data` to implement a custom "
+":class:`.DataSource` that can be used with "
+":class:`pybroker.strategy.Strategy`."
+msgstr ""
+
+#: 355925a69e5e431ea2eedd842a2f3466 of pybroker.data.DataSource._fetch_data:2
+msgid ""
+"Override this method to return data from a custom source. The returned "
+":class:`pandas.DataFrame` must contain the following columns: ``symbol``,"
+" ``date``, ``open``, ``high``, ``low``, and ``close``."
+msgstr ""
+
+#: a91d726e989b4d5dacce737b93a6634b of pybroker.data.DataSource._fetch_data:7
+#: pybroker.data.YFinance.query:4
+msgid "Ticker symbols of the data to query."
+msgstr ""
+
+#: c4a225d14cd14dd6ad217d79e5bb9e1c of pybroker.data.DataSourceCacheMixin:1
+msgid "Bases: :py:class:`object`"
+msgstr ""
+
+#: 882fe0767abf4f0d857656950b234b5a of pybroker.data.DataSourceCacheMixin:1
+msgid ""
+"Mixin that implements fetching and storing cached :class:`.DataSource` "
+"data."
+msgstr ""
+
+#: fd95ac00fbda4e1890b1b599fcaff8e2 of
+#: pybroker.data.DataSourceCacheMixin.get_cached:1
+msgid ""
+"Retrieves cached data from disk when caching is enabled with "
+":meth:`pybroker.cache.enable_data_source_cache`."
+msgstr ""
+
+#: 223a4047d202488bb02a694bfc10ab46 of
+#: pybroker.data.DataSourceCacheMixin.get_cached:4
+msgid ":class:`Iterable` of symbols for fetching cached data."
+msgstr ""
+
+#: 50daff0dada64bbcb7a9b3a3c7667d95 of
+#: pybroker.data.DataSourceCacheMixin.get_cached:5
+msgid ""
+"Formatted string that specifies the timeframe resolution of the cached "
+"data. The timeframe string supports the following units:  - "
+"``\"s\"``/``\"sec\"``: seconds - ``\"m\"``/``\"min\"``: minutes - "
+"``\"h\"``/``\"hour\"``: hours - ``\"d\"``/``\"day\"``: days - "
+"``\"w\"``/``\"week\"``: weeks - ``\"mo\"``/``\"month\"``: months  An "
+"example timeframe string is ``1h 30m``."
+msgstr ""
+
+#: 6fcf6dafc02844deaa83f39798d82374 of
+#: pybroker.data.DataSourceCacheMixin.get_cached:5
+msgid ""
+"Formatted string that specifies the timeframe resolution of the cached "
+"data. The timeframe string supports the following units:"
+msgstr ""
+
+#: 1b56db14f6b442399d58ee0e504f10a1 of
+#: pybroker.data.DataSourceCacheMixin.get_cached:17
+msgid "Starting date of the cached data (inclusive)."
+msgstr ""
+
+#: 7b8687e7484a4fc8b01f0d8c15bb7812 of
+#: pybroker.data.DataSourceCacheMixin.get_cached:18
+msgid "Ending date of the cached data (inclusive)."
+msgstr ""
+
+#: 078aa736017e44608de7e45a93d12149 of
+#: pybroker.data.DataSourceCacheMixin.get_cached:21
+msgid ""
+"``tuple[pandas.DataFrame, Iterable[str]]`` containing a "
+":class:`pandas.DataFrame` with the cached data, and an ``Iterable[str]`` "
+"of symbols for which no cached data was found."
+msgstr ""
+
+#: 6817c351b2614551ae89aad1ac375b07 of
+#: pybroker.data.DataSourceCacheMixin.set_cached:1
+msgid ""
+"Stores data to disk cache when caching is enabled with "
+":meth:`pybroker.cache.enable_data_source_cache`."
+msgstr ""
+
+#: d70275663b0f4f2198988c2b196811c6 of
+#: pybroker.data.DataSourceCacheMixin.set_cached:4
+msgid ""
+"Formatted string that specifies the timeframe resolution of the data to "
+"cache. The timeframe string supports the following units:  - "
+"``\"s\"``/``\"sec\"``: seconds - ``\"m\"``/``\"min\"``: minutes - "
+"``\"h\"``/``\"hour\"``: hours - ``\"d\"``/``\"day\"``: days - "
+"``\"w\"``/``\"week\"``: weeks - ``\"mo\"``/``\"month\"``: months  An "
+"example timeframe string would be ``1h 30m``."
+msgstr ""
+
+#: 799d93cc87ee4db687a2619190671f7b of
+#: pybroker.data.DataSourceCacheMixin.set_cached:4
+msgid ""
+"Formatted string that specifies the timeframe resolution of the data to "
+"cache. The timeframe string supports the following units:"
+msgstr ""
+
+#: 76da51d726364a958e0811f71355a0a3 of
+#: pybroker.data.DataSourceCacheMixin.set_cached:15
+msgid "An example timeframe string would be ``1h 30m``."
+msgstr ""
+
+#: d4ba93f84d2443a9b0e2185e3cd09f8f of
+#: pybroker.data.DataSourceCacheMixin.set_cached:16
+msgid "Starting date of the data to cache (inclusive)."
+msgstr ""
+
+#: 74d60eec5c314d60ac692a2498022232 of
+#: pybroker.data.DataSourceCacheMixin.set_cached:17
+msgid "Ending date of the data to cache (inclusive)."
+msgstr ""
+
+#: 739c308116f743d09a66234ca0852275 of
+#: pybroker.data.DataSourceCacheMixin.set_cached:19
+msgid ":class:`pandas.DataFrame` containing the data to cache."
+msgstr ""
+
+#: e1e52694d23849e9a20573c94e24510b of pybroker.data.YFinance:1
+msgid "Retrieves data from `Yahoo Finance <https://finance.yahoo.com/>`_\\ ."
+msgstr ""
+
+#: 18a1b1f6f39f4bd792bcdefa64af0e8d of pybroker.data.YFinance:5
+msgid "Column name of adjusted close prices."
+msgstr ""
+
+#: 1096cc2cd6d144debbef619034b81d39 of pybroker.data.YFinance
+msgid "type"
+msgstr ""
+
+#: 68a216d67f914752b5848f6e3519f021 of pybroker.data.YFinance:7
+msgid "Final"
+msgstr ""
+
+#: 785d1ec7945641208e31034dfb270d54 of pybroker.data.YFinance.query:1
+msgid ""
+"Queries data from `Yahoo Finance <https://finance.yahoo.com/>`_\\ . The "
+"timeframe of the data is limited to per day only."
+msgstr ""
+
+#~ msgid "Contains :class:`.DataSource`\\ s used to fetch external data."
+#~ msgstr ""
+
+#~ msgid "Bases: :py:class:`~pybroker.data.DataSource`"
+#~ msgstr ""
+
+#~ msgid "Retrieves data from `AKShare <https://akshare.akfamily.xyz/>`_\\ ."
+#~ msgstr ""
+
+#~ msgid "Column name of adjusted close prices."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Queries data from `AKShare "
+#~ "<https://akshare.akfamily.xyz/>`_\\ . The timeframe"
+#~ " of the data is limited to per"
+#~ " day only."
+#~ msgstr ""
+
+#~ msgid "Parameters"
+#~ msgstr ""
+
+#~ msgid "Ticker symbols of the data to query."
+#~ msgstr ""
+
+#~ msgid "Start date of the data to query (inclusive)."
+#~ msgstr ""
+
+#~ msgid "End date of the data to query (inclusive)."
+#~ msgstr ""
+
+#~ msgid "The type of adjustment to make."
+#~ msgstr ""
+
+#~ msgid "Returns"
+#~ msgstr ""
+
+#~ msgid ":class:`pandas.DataFrame` containing the queried data."
+#~ msgstr ""
+
+#~ msgid "Retrieves stock data from `Alpaca <https://alpaca.markets/>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Queries data. Cached data is returned"
+#~ " if caching is enabled by calling "
+#~ ":meth:`pybroker.cache.enable_data_source_cache`."
+#~ msgstr ""
+
+#~ msgid "Symbols of the data to query."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Formatted string that specifies the "
+#~ "timeframe resolution to query. The "
+#~ "timeframe string supports the following "
+#~ "units:  - ``\"s\"``/``\"sec\"``: seconds - "
+#~ "``\"m\"``/``\"min\"``: minutes - "
+#~ "``\"h\"``/``\"hour\"``: hours - "
+#~ "``\"d\"``/``\"day\"``: days - "
+#~ "``\"w\"``/``\"week\"``: weeks - "
+#~ "``\"mo\"``/``\"month\"``: months  An example "
+#~ "timeframe string is ``1h 30m``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Formatted string that specifies the "
+#~ "timeframe resolution to query. The "
+#~ "timeframe string supports the following "
+#~ "units:"
+#~ msgstr ""
+
+#~ msgid "``\"s\"``/``\"sec\"``: seconds"
+#~ msgstr ""
+
+#~ msgid "``\"m\"``/``\"min\"``: minutes"
+#~ msgstr ""
+
+#~ msgid "``\"h\"``/``\"hour\"``: hours"
+#~ msgstr ""
+
+#~ msgid "``\"d\"``/``\"day\"``: days"
+#~ msgstr ""
+
+#~ msgid "``\"w\"``/``\"week\"``: weeks"
+#~ msgstr ""
+
+#~ msgid "``\"mo\"``/``\"month\"``: months"
+#~ msgstr ""
+
+#~ msgid "An example timeframe string is ``1h 30m``."
+#~ msgstr ""
+
+#~ msgid "Retrieves crypto data from `Alpaca <https://alpaca.markets/>`_."
+#~ msgstr ""
+
+#~ msgid "Alpaca API key."
+#~ msgstr ""
+
+#~ msgid "Alpaca API secret."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Bases: :py:class:`~abc.ABC`, "
+#~ ":py:class:`~pybroker.data.DataSourceCacheMixin`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Base class for querying data from "
+#~ "an external source. Extend this class"
+#~ " and override :meth:`._fetch_data` to "
+#~ "implement a custom :class:`.DataSource` that"
+#~ " can be used with "
+#~ ":class:`pybroker.strategy.Strategy`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Override this method to return data "
+#~ "from a custom source. The returned "
+#~ ":class:`pandas.DataFrame` must contain the "
+#~ "following columns: ``symbol``, ``date``, "
+#~ "``open``, ``high``, ``low``, and ``close``."
+#~ msgstr ""
+
+#~ msgid "Bases: :py:class:`object`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Mixin that implements fetching and "
+#~ "storing cached :class:`.DataSource` data."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Retrieves cached data from disk when "
+#~ "caching is enabled with "
+#~ ":meth:`pybroker.cache.enable_data_source_cache`."
+#~ msgstr ""
+
+#~ msgid ":class:`Iterable` of symbols for fetching cached data."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Formatted string that specifies the "
+#~ "timeframe resolution of the cached data."
+#~ " The timeframe string supports the "
+#~ "following units:  - ``\"s\"``/``\"sec\"``: "
+#~ "seconds - ``\"m\"``/``\"min\"``: minutes - "
+#~ "``\"h\"``/``\"hour\"``: hours - "
+#~ "``\"d\"``/``\"day\"``: days - "
+#~ "``\"w\"``/``\"week\"``: weeks - "
+#~ "``\"mo\"``/``\"month\"``: months  An example "
+#~ "timeframe string is ``1h 30m``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Formatted string that specifies the "
+#~ "timeframe resolution of the cached data."
+#~ " The timeframe string supports the "
+#~ "following units:"
+#~ msgstr ""
+
+#~ msgid "Starting date of the cached data (inclusive)."
+#~ msgstr ""
+
+#~ msgid "Ending date of the cached data (inclusive)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``tuple[pandas.DataFrame, Iterable[str]]`` containing "
+#~ "a :class:`pandas.DataFrame` with the cached"
+#~ " data, and an ``Iterable[str]`` of "
+#~ "symbols for which no cached data "
+#~ "was found."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Stores data to disk cache when "
+#~ "caching is enabled with "
+#~ ":meth:`pybroker.cache.enable_data_source_cache`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Formatted string that specifies the "
+#~ "timeframe resolution of the data to "
+#~ "cache. The timeframe string supports the"
+#~ " following units:  - ``\"s\"``/``\"sec\"``: "
+#~ "seconds - ``\"m\"``/``\"min\"``: minutes - "
+#~ "``\"h\"``/``\"hour\"``: hours - "
+#~ "``\"d\"``/``\"day\"``: days - "
+#~ "``\"w\"``/``\"week\"``: weeks - "
+#~ "``\"mo\"``/``\"month\"``: months  An example "
+#~ "timeframe string would be ``1h 30m``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Formatted string that specifies the "
+#~ "timeframe resolution of the data to "
+#~ "cache. The timeframe string supports the"
+#~ " following units:"
+#~ msgstr ""
+
+#~ msgid "An example timeframe string would be ``1h 30m``."
+#~ msgstr ""
+
+#~ msgid "Starting date of the data to cache (inclusive)."
+#~ msgstr ""
+
+#~ msgid "Ending date of the data to cache (inclusive)."
+#~ msgstr ""
+
+#~ msgid ":class:`pandas.DataFrame` containing the data to cache."
+#~ msgstr ""
+
+#~ msgid "Retrieves data from `Yahoo Finance <https://finance.yahoo.com/>`_\\ ."
+#~ msgstr ""
+
+#~ msgid "type"
+#~ msgstr ""
+
+#~ msgid "Final"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Queries data from `Yahoo Finance "
+#~ "<https://finance.yahoo.com/>`_\\ . The timeframe "
+#~ "of the data is limited to per "
+#~ "day only."
+#~ msgstr ""
+

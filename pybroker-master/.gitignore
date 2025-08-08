@@ -1,0 +1,15 @@
+.numba_config.yaml
+__pycache__
+.pybrokercache
+.venv*
+.tox
+**/.coverage
+**/.coverage.*
+docs/build
+docs/_build/
+docs/source/notebooks/.ipynb_checkpoints
+dist/
+src/lib_pybroker.egg-info
+.idea/
+.pytest_cache/
+**/locales/*/LC_MESSAGES/*.mo
