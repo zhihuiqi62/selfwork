@@ -4,6 +4,8 @@
 
 This code is licensed under Apache 2.0 with Commons Clause license
 (see LICENSE for details).
+中文文档说明
+# https://www.pybroker.com/zh-cn/latest/notebooks/1.%20Getting%20Started%20with%20Data%20Sources.html
 """
 
 from pybroker.cache import (
