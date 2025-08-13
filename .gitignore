@@ -2,4 +2,4 @@ mlruns/
 qlib_data.zip
 qlib_data/
 split_stock_data/
-
+logs/
